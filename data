@@ -17,6 +17,6 @@
 	{"skillName":"Android Studio", "skillIcon":"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Android_Studio_Icon_%282014-2019%29.svg/1200px-Android_Studio_Icon_%282014-2019%29.svg.png"},
 	{"skillName":"GIT", "skillIcon":"https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"},
 	{"skillName":"Cordova", "skillIcon":"https://cordova.apache.org/static/img/cordova_256.png"},
-	{"skillName":"React Native", "skillIcon":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"},
+	{"skillName":"React Native", "skillIcon":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"}
 ]
 }
