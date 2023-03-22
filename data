@@ -1,0 +1,22 @@
+{
+"name":"Ivan",
+"surname":"Disirò",
+"nationality":"Italy",
+"job":"Android Dev",
+"aboutMe":"",
+"url":"https://media.licdn.com/dms/image/C5603AQHWXP-JzWDbSA/profile-displayphoto-shrink_400_400/0/1517449973678?e=1684368000&v=beta&t=3maanV6GLYklqUBzkOkbWz1g2vPUCKWxAyUiAY5cU0s",
+"linkedin":"https://www.linkedin.com/in/ivandisiro",
+"github":"https://github.com/ivandisi",
+"playstore":"https://play.google.com/store/apps/developer?id=AX+Labs&hl=en_US",
+"stackoverflow":"https://stackoverflow.com/users/4416966/ivan",
+"skills":[
+	{"skillName":"Java", "skillIcon":"https://cdn-icons-png.flaticon.com/512/5968/5968282.png"},
+	{"skillName":"Kotlin", "skillIcon":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Kotlin_Icon.svg/1200px-Kotlin_Icon.svg.png"},
+	{"skillName":"JavaScript", "skillIcon":"https://cdn-icons-png.flaticon.com/512/5968/5968292.png"},
+	{"skillName":"TypeScript", "skillIcon":"https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1024px-Typescript_logo_2020.svg.png"},
+	{"skillName":"Android Studio", "skillIcon":"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Android_Studio_Icon_%282014-2019%29.svg/1200px-Android_Studio_Icon_%282014-2019%29.svg.png"},
+	{"skillName":"GIT", "skillIcon":"https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"},
+	{"skillName":"Cordova", "skillIcon":"https://cordova.apache.org/static/img/cordova_256.png"},
+	{"skillName":"React Native", "skillIcon":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"},
+]
+}
