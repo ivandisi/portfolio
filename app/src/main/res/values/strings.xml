@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Portfolio</string>
+    <string name="main_fragment">ME</string>
+    <string name="skills_fragment">Skills</string>    00897b
+    <string name="check_also">Check also on me:</string>
+    <string name="some_of_my_skills">Some of my skills</string>
+    <string name="neterr">NetworkError</string>
+</resources>
