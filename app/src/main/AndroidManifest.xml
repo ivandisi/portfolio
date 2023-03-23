@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="it.ivandisiro.portfolio">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -15,6 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Portfolio"
         tools:targetApi="31">
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

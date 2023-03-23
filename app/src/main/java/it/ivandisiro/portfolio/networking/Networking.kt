@@ -22,6 +22,11 @@ class Networking {
         this.service = retrofit.create(ApiService::class.java)
     }
 
+    fun getProfileSync(): Me? {
+        var data: Response<Me> = this.service.getProfile().execute();
+        return if (data.isSuccessful) data.body() else null;
+    }
+
     fun getProfile(callback: ProfileCallback) {
         this.service.getProfile().enqueue(object : Callback<Me> {
             override fun onResponse(call: Call<Me>, response: Response<Me>) {

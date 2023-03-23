@@ -8,8 +8,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import it.ivandisiro.portfolio.R
-import it.ivandisiro.portfolio.data.Data
 import it.ivandisiro.portfolio.databinding.FragmentSkillsBinding;
+import it.ivandisiro.portfolio.model.Me
+import it.ivandisiro.portfolio.repository.ProfileRepository
 import it.ivandisiro.portfolio.ui.main.adapter.SkillAdapter
 import it.ivandisiro.portfolio.ui.main.viewmodel.SkillsViewModel
 
@@ -31,7 +32,9 @@ class SkillsFragment : Fragment() {
         vm.skillList.observe( viewLifecycleOwner, Observer {
             adapter.setSkillsList(it);
         })
-        vm.setAllSkills(Data.me.skills);
+        ProfileRepository.me.observe(viewLifecycleOwner, Observer<Me?> { meOb: Me? ->
+            if (meOb != null) vm.setAllSkills(meOb.skills);
+        });
         return binding.root;
     }
 }
