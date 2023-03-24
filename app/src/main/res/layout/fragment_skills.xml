@@ -19,7 +19,7 @@
         tools:context=".ui.main.fragment.MainFragment">
 
         <ImageView
-            android:visibility="gone"
+            android:visibility="@{viewModel.stateDataListEmpty}"
             android:layout_height="80dp"
             android:layout_width="80dp"
             android:alpha=".25"

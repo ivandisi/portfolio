@@ -1,25 +1,25 @@
 package it.ivandisiro.portfolio.ui.main.viewmodel
 
+import android.view.View
 import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import it.ivandisiro.portfolio.BR
 import it.ivandisiro.portfolio.model.Skill
-import java.lang.Exception
 
 class SkillsViewModel: BaseObservable() {
 
     val skillList = MutableLiveData<List<Skill>>();
+    var skillListEmpty: Boolean = true;
 
     fun setAllSkills(skills: List<Skill>) {
-        skillList.postValue(skills)
+        this.skillListEmpty = skills.isNotEmpty();
+        this.skillList.postValue(skills)
+        notifyPropertyChanged(BR.stateDataListEmpty);
     }
 
-    fun hasDataInList(): Boolean {
-        try {
-            return skillList.value!!.isNotEmpty();
-        } catch (e : Exception) {
-            return false;
-        }
+    @Bindable
+    fun getStateDataListEmpty(): Int {
+        return if(this.skillListEmpty) View.GONE else View.VISIBLE;
     }
 }

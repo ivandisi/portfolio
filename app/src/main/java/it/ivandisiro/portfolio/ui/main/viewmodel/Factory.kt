@@ -1,3 +1,5 @@
+@file:Suppress("UNCHECKED_CAST")
+
 package it.ivandisiro.portfolio.ui.main.viewmodel
 
 import androidx.databinding.BaseObservable
@@ -9,6 +11,6 @@ class Factory {
         } else if (modelClass.isAssignableFrom(SkillsViewModel::class.java)) {
             return SkillsViewModel() as T;
         }
-        throw IllegalArgumentException("Unable to construct viewmodel")
+        throw IllegalArgumentException("Unable to construct viewmodel");
     }
 }

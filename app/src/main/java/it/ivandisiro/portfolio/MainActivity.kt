@@ -24,21 +24,22 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        activity = this;
-        RoomDatabaseSingleton.initDB(this);
 
-        val connectivityManager = getSystemService(ConnectivityManager::class.java) as ConnectivityManager
-        connectivityManager.requestNetwork(this.generateRequest(), networkCallback)
+        RoomDatabaseSingleton.initDB(this);
 
         runBlocking {
             ProfileRepository.initData();
             getData();
         }
 
+        setContentView(R.layout.activity_main);
+        activity = this;
         var viewPager:ViewPager = findViewById(R.id.pager)
         viewPager.adapter = MyViewPagerAdapter(activity, supportFragmentManager);
 
+        val connectivityManager = getSystemService(ConnectivityManager::class.java) as ConnectivityManager
+        connectivityManager.requestNetwork(this.generateRequest(), networkCallback)
+        
     }
 
     suspend fun getData() = coroutineScope {
