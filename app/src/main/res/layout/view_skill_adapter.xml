@@ -29,7 +29,7 @@
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/grey_900"
+                android:textColor="@color/text_variant"
                 android:textStyle="bold"
                 android:text="@{skill.skillName}"/>
 

@@ -49,7 +49,7 @@
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
+                    android:textColor="@color/text"
                     android:text="@{viewModel.myName}"/>
 
 
@@ -75,7 +75,7 @@
                             android:layout_gravity="center"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/white"
+                            android:textColor="@color/text"
                             android:textStyle="bold"
                             android:text="@{viewModel.myJob}"/>
 
@@ -83,7 +83,7 @@
                             android:layout_gravity="center"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/white"
+                            android:textColor="@color/text"
                             android:text="@{viewModel.myNationality}"/>
                     </androidx.appcompat.widget.LinearLayoutCompat>
                 </androidx.cardview.widget.CardView>
@@ -102,7 +102,7 @@
                         android:layout_gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/grey_900"
+                        android:textColor="@color/text_variant"
                         android:justificationMode="inter_word"
                         android:text="@{viewModel.aboutMe}"/>
 
@@ -129,7 +129,7 @@
                             android:layout_gravity="center"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/grey_900"
+                            android:textColor="@color/text_variant"
                             android:justificationMode="inter_word"
                             android:text="@string/check_also" />
 

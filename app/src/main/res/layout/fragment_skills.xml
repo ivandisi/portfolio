@@ -47,7 +47,8 @@
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/white"
+                    android:textColor="@color/text"
+                    android:textStyle="bold"
                     android:text="@string/some_of_my_skills"/>
             </androidx.cardview.widget.CardView>
 
