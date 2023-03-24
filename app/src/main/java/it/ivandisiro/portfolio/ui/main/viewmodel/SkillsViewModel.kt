@@ -14,7 +14,7 @@ class SkillsViewModel: BaseObservable() {
     fun setAllSkills(skills: List<Skill>) {
         skillList.postValue(skills)
     }
-    
+
     fun hasDataInList(): Boolean {
         try {
             return skillList.value!!.isNotEmpty();

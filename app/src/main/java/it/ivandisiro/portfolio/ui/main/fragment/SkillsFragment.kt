@@ -12,6 +12,7 @@ import it.ivandisiro.portfolio.databinding.FragmentSkillsBinding;
 import it.ivandisiro.portfolio.model.Me
 import it.ivandisiro.portfolio.repository.ProfileRepository
 import it.ivandisiro.portfolio.ui.main.adapter.SkillAdapter
+import it.ivandisiro.portfolio.ui.main.viewmodel.Factory
 import it.ivandisiro.portfolio.ui.main.viewmodel.SkillsViewModel
 
 
@@ -27,7 +28,7 @@ class SkillsFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_skills, container, false);
-        vm = SkillsViewModel();
+        vm = Factory().create(SkillsViewModel::class.java);
         binding.recyclerview.adapter = adapter
         vm.skillList.observe( viewLifecycleOwner, Observer {
             adapter.setSkillsList(it);

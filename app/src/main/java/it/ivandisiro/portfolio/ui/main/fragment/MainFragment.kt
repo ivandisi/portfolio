@@ -11,6 +11,7 @@ import it.ivandisiro.portfolio.R
 import it.ivandisiro.portfolio.model.Me
 import it.ivandisiro.portfolio.databinding.FragmentMainBinding;
 import it.ivandisiro.portfolio.repository.ProfileRepository
+import it.ivandisiro.portfolio.ui.main.viewmodel.Factory
 import it.ivandisiro.portfolio.ui.main.viewmodel.MainViewModel
 
 
@@ -24,7 +25,7 @@ class MainFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false);
-        vm = MainViewModel();
+        vm = Factory().create(MainViewModel::class.java);
         ProfileRepository.me.observe(viewLifecycleOwner, Observer<Me?> { meOb: Me? ->
             if (meOb != null) vm.setMe(meOb);
         });
