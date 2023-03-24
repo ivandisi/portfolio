@@ -18,7 +18,7 @@ object ProfileRepository{
     suspend fun initData() {
         withContext(Dispatchers.IO) {
             var test = RoomDatabaseSingleton.db.profileDao().getAll();
-            me.postValue(test[0]);
+            if (test.isNotEmpty()) me.postValue(test[0]);
         }
     }
 
