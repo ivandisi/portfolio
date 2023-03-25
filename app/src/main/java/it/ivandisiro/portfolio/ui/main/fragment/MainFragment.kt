@@ -25,7 +25,8 @@ class MainFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false);
-        vm = Factory().create(MainViewModel::class.java);
+
+        vm = Factory(requireActivity().application).create(MainViewModel::class.java);
         ProfileRepository.me.observe(viewLifecycleOwner, Observer<Me?> { meOb: Me? ->
             if (meOb != null) vm.setMe(meOb);
         });

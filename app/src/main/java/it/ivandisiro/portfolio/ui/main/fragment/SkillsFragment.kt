@@ -28,7 +28,7 @@ class SkillsFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_skills, container, false);
-        vm = Factory().create(SkillsViewModel::class.java);
+        vm = Factory(requireActivity().application).create(SkillsViewModel::class.java);
         binding.viewModel = vm;
         binding.recyclerview.adapter = adapter
         vm.skillList.observe( viewLifecycleOwner, Observer {

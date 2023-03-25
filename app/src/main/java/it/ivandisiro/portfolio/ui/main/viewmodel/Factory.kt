@@ -2,14 +2,22 @@
 
 package it.ivandisiro.portfolio.ui.main.viewmodel
 
-import androidx.databinding.BaseObservable
+import android.app.Application
+import it.ivandisiro.portfolio.ui.main.viewmodel.support.ObservableViewModel
 
-class Factory {
-    fun <T : BaseObservable?> create(modelClass: Class<T>): T {
+class Factory(app: Application) {
+
+    var app: Application;
+
+    init {
+        this.app = app;
+    }
+    
+    fun <T : ObservableViewModel?> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(MainViewModel::class.java)) {
-            return MainViewModel() as T;
+            return MainViewModel(this.app) as T;
         } else if (modelClass.isAssignableFrom(SkillsViewModel::class.java)) {
-            return SkillsViewModel() as T;
+            return SkillsViewModel(app) as T;
         }
         throw IllegalArgumentException("Unable to construct viewmodel");
     }

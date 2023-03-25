@@ -162,8 +162,8 @@
                                 android:layout_weight="0.25"
                                 android:layout_margin="5dp"
                                 android:layout_gravity="center"
-                                android:layout_height="40dp"
-                                android:layout_width="40dp"
+                                android:layout_height="30dp"
+                                android:layout_width="30dp"
                                 android:onClick="@{viewModel.openPlaystore}"
                                 android:src="@drawable/playstore"/>
 
@@ -171,8 +171,8 @@
                                 android:layout_weight="0.25"
                                 android:layout_margin="5dp"
                                 android:layout_gravity="center"
-                                android:layout_height="40dp"
-                                android:layout_width="40dp"
+                                android:layout_height="30dp"
+                                android:layout_width="30dp"
                                 android:onClick="@{viewModel.openGitHub}"
                                 android:src="@drawable/github"/>
 

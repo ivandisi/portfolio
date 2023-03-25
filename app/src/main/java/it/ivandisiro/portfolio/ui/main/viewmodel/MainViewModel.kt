@@ -1,5 +1,6 @@
 package it.ivandisiro.portfolio.ui.main.viewmodel
 
+import android.app.Application
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
@@ -12,9 +13,10 @@ import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
 import it.ivandisiro.portfolio.BR
 import it.ivandisiro.portfolio.model.Me
+import it.ivandisiro.portfolio.ui.main.viewmodel.support.ObservableViewModel
 
 
-class MainViewModel : BaseObservable() {
+class MainViewModel(app: Application) : ObservableViewModel(app) {
     private var me: Me;
 
     init {
@@ -23,11 +25,7 @@ class MainViewModel : BaseObservable() {
 
     fun setMe(me: Me){
         this.me = me;
-        notifyPropertyChanged(BR.myName);
-        notifyPropertyChanged(BR.myJob);
-        notifyPropertyChanged(BR.myNationality);
-        notifyPropertyChanged(BR.myImage);
-        notifyPropertyChanged(BR.aboutMe);
+        notifyChange();
     }
 
     @Bindable
