@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import it.ivandisiro.portfolio.R
 import it.ivandisiro.portfolio.model.Me
 import it.ivandisiro.portfolio.databinding.FragmentMainBinding;
@@ -26,7 +27,7 @@ class MainFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false);
 
-        vm = Factory(requireActivity().application).create(MainViewModel::class.java);
+        vm = ViewModelProvider(this).get(MainViewModel::class.java)
         ProfileRepository.me.observe(viewLifecycleOwner, Observer<Me?> { meOb: Me? ->
             if (meOb != null) vm.setMe(meOb);
         });
